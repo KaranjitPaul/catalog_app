@@ -48,7 +48,12 @@ class _HomePage3State extends State<HomePage3> {
               CatalogHeader(),
               (items == null)
                   ? Expanded(child: Center(child: CircularProgressIndicator()))
-                  : Expanded(child: CatalogList(items: items)),
+                  : Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 16),
+                        child: CatalogList(items: items),
+                      ),
+                    ),
             ],
           ),
         ),
@@ -56,5 +61,3 @@ class _HomePage3State extends State<HomePage3> {
     );
   }
 }
-
-

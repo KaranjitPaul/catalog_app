@@ -19,7 +19,7 @@ class CatalogHeader extends StatelessWidget {
         ),
         Text(
           " Trending products.",
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
         ),
       ],
     );
