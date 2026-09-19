@@ -9,7 +9,7 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MyTheme.creamColor,
+      backgroundColor: Theme.of(context).canvasColor,
       appBar: AppBar(backgroundColor: Colors.transparent),
       body: SafeArea(
         bottom: false,
@@ -28,7 +28,7 @@ class HomeDetailPage extends StatelessWidget {
             Expanded(
               child: Container(
                 width: double.infinity,
-                color: Colors.white,
+                color: Theme.of(context).cardColor,
                 child: Column(
                   children: [
                     Padding(
@@ -36,7 +36,7 @@ class HomeDetailPage extends StatelessWidget {
                       child: Text(
                         catalog.name,
                         style: TextStyle(
-                          color: MyTheme.darkBluishColor,
+                          color: Theme.of(context).colorScheme.secondary,
                           fontWeight: FontWeight.bold,
                           fontSize: 35,
                         ),
@@ -46,7 +46,7 @@ class HomeDetailPage extends StatelessWidget {
                       catalog.desc,
                       style: TextStyle(
                         fontSize: 18,
-                        color: MyTheme.darkBluishColor,
+                        color: Theme.of(context).colorScheme.secondary,
                       ),
                     ),
                     Container(
@@ -65,7 +65,7 @@ class HomeDetailPage extends StatelessWidget {
       ),
       bottomNavigationBar: Container(
         padding: const EdgeInsets.all(32),
-        color: Colors.white,
+        color: Theme.of(context).cardColor,
         child: OverflowBar(
           alignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -83,9 +83,6 @@ class HomeDetailPage extends StatelessWidget {
               child: ElevatedButton(
                 onPressed: () {},
                 style: ButtonStyle(
-                  backgroundColor: WidgetStatePropertyAll(
-                    MyTheme.darkBluishColor,
-                  ),
                   shape: WidgetStatePropertyAll(StadiumBorder()),
                 ),
                 child: Text(

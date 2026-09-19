@@ -1,7 +1,6 @@
 import 'package:catalog_app/models/catalog.dart';
 import 'package:catalog_app/pages/home_detail_page.dart';
 import 'package:catalog_app/widgets/home_widgets/catalog_image.dart';
-import 'package:catalog_app/widgets/themes.dart';
 import 'package:flutter/material.dart';
 
 class CatalogList extends StatelessWidget {
@@ -38,7 +37,7 @@ class CatalogItem extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 16),
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: Theme.of(context).cardColor,
           borderRadius: BorderRadius.circular(25),
         ),
         height: 150,
@@ -58,7 +57,7 @@ class CatalogItem extends StatelessWidget {
                     child: Text(
                       catalog.name,
                       style: TextStyle(
-                        color: MyTheme.darkBluishColor,
+                        color: Theme.of(context).colorScheme.secondary,
                         fontWeight: FontWeight.bold,
                         fontSize: 16,
                       ),
@@ -83,9 +82,6 @@ class CatalogItem extends StatelessWidget {
                         child: ElevatedButton(
                           onPressed: () {},
                           style: ButtonStyle(
-                            backgroundColor: WidgetStatePropertyAll(
-                              MyTheme.darkBluishColor,
-                            ),
                             shape: WidgetStatePropertyAll(CircleBorder()),
                           ),
                           child: Text(
