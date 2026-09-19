@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:catalog_app/models/catalog.dart';
+import 'package:catalog_app/utils/routes.dart';
 import 'package:catalog_app/widgets/home_widgets/catalog_header.dart';
 import 'package:catalog_app/widgets/home_widgets/catalog_list.dart';
 import 'package:catalog_app/widgets/themes.dart';
@@ -38,6 +39,12 @@ class _HomePage3State extends State<HomePage3> {
   Widget build(BuildContext context) {
     final items = CatalogModel.items;
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
+        shape: const CircleBorder(),
+        backgroundColor: MyTheme.darkBluishColor,
+        child: Icon(Icons.shopping_cart_outlined, color: Colors.white),
+      ),
       backgroundColor: MyTheme.creamColor,
       body: SafeArea(
         child: Container(

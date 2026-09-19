@@ -78,7 +78,7 @@ class HomeDetailPage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              width: 110,
+              width: 136,
               height: 50,
               child: ElevatedButton(
                 onPressed: () {},
@@ -88,7 +88,10 @@ class HomeDetailPage extends StatelessWidget {
                   ),
                   shape: WidgetStatePropertyAll(StadiumBorder()),
                 ),
-                child: Text("Buy", style: TextStyle(color: Colors.white)),
+                child: Text(
+                  "Add to Cart",
+                  style: TextStyle(color: Colors.white, fontSize: 15),
+                ),
               ),
             ),
           ],

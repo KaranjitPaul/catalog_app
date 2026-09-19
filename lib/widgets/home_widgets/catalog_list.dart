@@ -77,18 +77,20 @@ class CatalogItem extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsGeometry.fromLTRB(14, 10, 25, 10),
+                        padding: EdgeInsetsGeometry.all(
+                          10,
+                        ), //fromLTRB(14, 10, 25, 10)
                         child: ElevatedButton(
                           onPressed: () {},
                           style: ButtonStyle(
                             backgroundColor: WidgetStatePropertyAll(
                               MyTheme.darkBluishColor,
                             ),
-                            shape: WidgetStatePropertyAll(StadiumBorder()),
+                            shape: WidgetStatePropertyAll(CircleBorder()),
                           ),
                           child: Text(
-                            "Buy",
-                            style: TextStyle(color: Colors.white),
+                            "+",
+                            style: TextStyle(color: Colors.white, fontSize: 25),
                           ),
                         ),
                       ),
