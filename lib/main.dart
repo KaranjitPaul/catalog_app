@@ -1,4 +1,3 @@
-import 'package:catalog_app/pages/home_detail_page.dart';
 import 'package:catalog_app/pages/home_page1.dart';
 import 'package:catalog_app/pages/home_page2.dart';
 import 'package:catalog_app/pages/home_page3.dart';

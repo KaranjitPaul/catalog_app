@@ -1,11 +1,10 @@
-
-
 import 'package:catalog_app/widgets/themes.dart';
 import 'package:flutter/material.dart';
 
 class CatalogImage extends StatelessWidget {
   final String image;
-  const new({super.key, required this.image});
+
+  const CatalogImage({super.key, required this.image});
 
   @override
   Widget build(BuildContext context) {

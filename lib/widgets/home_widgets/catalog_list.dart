@@ -44,22 +44,28 @@ class CatalogItem extends StatelessWidget {
         height: 150,
         child: Row(
           children: [
-            Hero(tag: Key(catalog.id.toString()),child: CatalogImage(image: catalog.image)),
+            Hero(
+              tag: Key(catalog.id.toString()),
+              child: CatalogImage(image: catalog.image),
+            ),
             Expanded(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    catalog.name,
-                    style: TextStyle(
-                      color: MyTheme.darkBluishColor,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
+                  Padding(
+                    padding: const EdgeInsets.only(top: 15),
+                    child: Text(
+                      catalog.name,
+                      style: TextStyle(
+                        color: MyTheme.darkBluishColor,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
                     ),
                   ),
                   Text(catalog.desc, style: TextStyle(fontSize: 12)),
-                  SizedBox(height: 5),
+                  SizedBox(height: 4),
                   OverflowBar(
                     alignment: MainAxisAlignment.spaceBetween,
                     children: [
