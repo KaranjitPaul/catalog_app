@@ -19,6 +19,18 @@ class MyTheme {
       ),
     ),
     appBarTheme: AppBarTheme(foregroundColor: Colors.black, centerTitle: true),
+    textButtonTheme: TextButtonThemeData(
+      style: ButtonStyle(
+        backgroundColor: WidgetStatePropertyAll(darkBluishColor),
+        foregroundColor: WidgetStatePropertyAll(Colors.white),
+        shape: WidgetStatePropertyAll(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadiusGeometry.circular(6),
+          ),
+        ),
+        minimumSize: WidgetStatePropertyAll(Size(120, 40)),
+      ),
+    ),
     fontFamily: GoogleFonts.poppins().fontFamily,
   );
   static ThemeData darkTheme(BuildContext context) => ThemeData(
@@ -40,6 +52,18 @@ class MyTheme {
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ButtonStyle(
         backgroundColor: WidgetStatePropertyAll(lightPurpleColor),
+      ),
+    ),
+    textButtonTheme: TextButtonThemeData(
+      style: ButtonStyle(
+        backgroundColor: WidgetStatePropertyAll(lightPurpleColor),
+        foregroundColor: WidgetStatePropertyAll(Colors.white),
+        shape: WidgetStatePropertyAll(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadiusGeometry.circular(6),
+          ),
+        ),
+        minimumSize: WidgetStatePropertyAll(Size(120, 40)),
       ),
     ),
     fontFamily: GoogleFonts.poppins().fontFamily,
