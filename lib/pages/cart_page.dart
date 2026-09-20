@@ -35,11 +35,21 @@ class _CartTotal extends StatelessWidget {
           Text(
             "\$999",
             style: TextStyle(
-              fontSize: 30,
+              fontSize: 35,
               color: Theme.of(context).colorScheme.secondary,
             ),
           ),
-          TextButton(onPressed: () {}, child: Text("Buy")),
+          TextButton(
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(content: Text("Buying not supported yet.")),
+              );
+            },
+            child: Text(
+              "Buy",
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            ),
+          ),
         ],
       ),
     );

@@ -1,13 +1,10 @@
 class CatalogModel {
   static List<Item> items = [];
 
-  Item? getById(int id) {
-    for (final item in items) {
-      if (item.id == id) {
-        return item;
-      }
-    }
-    return null;
+  Item getById(int id) {
+    return items.firstWhere(
+      (item) => item.id == id,
+    );
   }
 
   Item? getByPosition(int pos) {
