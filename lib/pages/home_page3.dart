@@ -51,7 +51,7 @@ class _HomePage3State extends State<HomePage3> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CatalogHeader(),
-              (items == null)
+              (items.isEmpty)
                   ? Expanded(child: Center(child: CircularProgressIndicator()))
                   : Expanded(
                       child: Padding(

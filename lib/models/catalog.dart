@@ -1,5 +1,19 @@
 class CatalogModel {
-  static List<Item>? items;
+  static List<Item> items = [];
+
+  Item? getById(int id) {
+    for (final item in items) {
+      if (item.id == id) {
+        return item;
+      }
+    }
+    return null;
+  }
+
+  Item? getByPosition(int pos) {
+    if (pos < 0 || pos >= items.length) return null;
+    return items[pos];
+  }
 }
 
 class Item {

@@ -24,7 +24,7 @@ class MyTheme {
   static ThemeData darkTheme(BuildContext context) => ThemeData(
     appBarTheme: AppBarTheme(
       backgroundColor: Colors.black,
-      foregroundColor: Colors.black,
+      foregroundColor: Colors.white,
       centerTitle: true,
     ),
     colorScheme: ColorScheme.fromSeed(
