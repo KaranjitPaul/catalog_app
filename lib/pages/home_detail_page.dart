@@ -1,5 +1,4 @@
 import 'package:catalog_app/models/catalog.dart';
-import 'package:catalog_app/widgets/themes.dart';
 import 'package:flutter/material.dart';
 
 class HomeDetailPage extends StatelessWidget {
